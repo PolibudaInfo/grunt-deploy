@@ -35,10 +35,17 @@ grunt.initConfig({
           port: 22,
           username: 'username',
           password: 'password'
+        },{
+          host: '321.321.321.21',
+          port: 98722,
+		  privateKey: require('fs').readFileSync('/path/to/your/.ssh/id_rsa', 'utf8'),
+		  publicKey: require('fs').readFileSync('/path/to/your/.ssh/id_rsa.pub', 'utf8'),
+		  passphrase: 'yourKeyPassPhrase'
         }],
-        cmds_before_deploy: ["some cmds you may want to exec before deploy"],
-        cmds_after_deploy: ["forever restart", "some other cmds you want to exec after deploy"],
+        cmds_before_deploy: ["some remote cmds you may want to exec before deploy"],
+        cmds_after_deploy: ["forever restart", "some other remote cmds you want to exec after deploy"],
         deploy_path: 'your deploy path in server'
+		dist: "contents of your dist folder. Iff ommited `.` will be used eg. dist/*"
       }
     }
   },

@@ -20,6 +20,8 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-deploy');
 ```
 
+Log in to your server and create ``raleases`` folder in your ``deploy_path`` and you're ready to go.
+
 ## The "deploy" task
 
 ### Overview
